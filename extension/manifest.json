@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "Roll up this page",
+  "description": "This is a roller demo.",
+  "icons": {
+    "128": "icon-128.png"
+  },
+
+  "action": {},
+  "background": {
+    "service_worker": "js/service_worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/content.js"],
+      "matches": ["\u003Call_urls>"],
+      "all_frames": true
+    }
+  ],
+  "permissions": ["activeTab", "tabs"]
+}
